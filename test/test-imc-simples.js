@@ -7,8 +7,22 @@
 // 30 ou mais: Obesidade
 
 function calcImcDaGalera (peso, altura){
-    let calc = (peso / (altura * altura) ).toFixed(2)
-    return calc
+    let resultado = String
+    let calc = (peso / (altura * altura) );
+    // console.log(calc)
+    if (calc < 18.5) {
+        resultado = `${calc.toFixed(2)} - Abaixo do peso`;
+
+    } else if (calc < 25) {
+        resultado = `${calc.toFixed(2)} - Peso normal`;
+
+    } else if (calc < 30) {
+        resultado = `${calc.toFixed(2)} - Sobrepeso`;
+
+    } else {
+        resultado = `${calc.toFixed(2)} - Status de Obesidade`;
+    }
+    return resultado
 }
 
 
@@ -25,6 +39,6 @@ let demostracao = calcImcDaGalera(pessoas[0].peso, pessoas[0].altura)
 
 console.log('Imc da galera: ')
 for (let i = 0 ; i < pessoas.length ; i++) {
-    let calc = calcImcDaGalera(pessoas[i].peso, pessoas[i].altura)
-    console.log(`Nome: ${pessoas[i].nome} - Peso: ${pessoas[i].peso} - Altura: ${pessoas[i].altura} - IMC: ${calc}`)
+    let status = calcImcDaGalera(pessoas[i].peso, pessoas[i].altura)
+    console.log(`Nome: ${pessoas[i].nome} - Peso: ${pessoas[i].peso} - Altura: ${pessoas[i].altura} - IMC: ${status}`)
 }
