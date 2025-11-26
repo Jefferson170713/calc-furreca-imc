@@ -1,3 +1,5 @@
+
+
 // --- 1. SUA FUNÇÃO DE LÓGICA (O Cérebro) ---
 // (Mantive exatamente como você fez, só removi a linha 'let resultado = String' que era desnecessária)
 function calcImcDaGalera(peso, altura) {
@@ -22,16 +24,16 @@ function executarCalculo() {
     // A. PEGAR (GET) os dados do HTML
     // Usamos .value para pegar o que foi digitado
     let nomeUsuario = document.getElementById('nome').value;
-    let pesoUsuario = Number(document.getElementById('peso').value);   // Converte texto para número
-    let alturaUsuario = Number(document.getElementById('altura').value); // Converte texto para número
+    let pesoUsuario = document.getElementById('peso').value;   // Converte texto para número
+    let alturaUsuario = document.getElementById('altura').value; // Converte texto para número
 
     // B. PROCESSAR (Chamar sua função)
     // Passamos os valores que pegamos acima para a sua lógica
-    if (!pesoUsuario || !alturaUsuario) {
-        alert("Por favor, preencha peso e altura!");
-        return; // Para a execução da função aqui
-    }
-    
+    // if (!pesoUsuario || !alturaUsuario) {
+    //     alert("Por favor, preencha peso e altura!");
+    //     return; // Para a execução da função aqui
+    // }
+
     let resultadoFinal = calcImcDaGalera(pesoUsuario, alturaUsuario);
 
     // C. DEVOLVER (SET) para a tela
