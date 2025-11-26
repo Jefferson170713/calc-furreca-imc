@@ -1,0 +1,100 @@
+/* Definição de Cores e Variáveis */
+:root {
+    --primary-color: #4F46E5; /* Indigo moderno */
+    --bg-color: #F3F4F6;      /* Cinza claro para o fundo */
+    --card-bg: #FFFFFF;       /* Branco para o cartão */
+    --text-color: #1F2937;    /* Cinza escuro para texto */
+}
+
+/* Reset básico para remover margens padrão */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', sans-serif; 
+}
+
+/* Corpo da página: Centraliza tudo (Flexbox) */
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center;     /* Alinha verticalmente */
+    min-height: 100vh;       /* Altura total da tela */
+    padding: 20px;
+}
+
+/* O Cartão principal */
+.container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limite de largura para não ficar esticado em monitores */
+}
+
+h1 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.input-group { 
+    margin-bottom: 1rem; 
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4B5563;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Efeito ao clicar no input */
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+}
+
+button:hover { 
+    background-color: #4338CA; 
+}
+
+/* Área de resultado */
+#resultado {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    border: 1px dashed #D1D5DB;
+    min-height: 50px;
+}
